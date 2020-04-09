@@ -1,1 +1,2 @@
-this is for study k8s
+[Dockerから入るKubernets](https://github.com/takara9/)
+
