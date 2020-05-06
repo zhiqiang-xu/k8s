@@ -1,9 +1,8 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: DaemonSet
 metadata:
-  name: sample-deployment
+  name: sample-ds
 spec:
-  replicas: 3
   selector:
     matchLabels:
       app: sample-app
@@ -14,6 +13,6 @@ spec:
     spec:
       containers:
         - name: nginx-container
-          image: zhiqiang6677/go-web:0.5
+          image: nginx:1.12
           ports:
-            - containerPort: 8080
+            - containerPort: 80
